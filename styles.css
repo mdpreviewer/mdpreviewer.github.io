@@ -13,6 +13,10 @@ h1.title {
   font-size: 2.5em;
 }
 
+.socials {
+  text-align: center;
+}
+
 .head {
   font-family: "Alfa Slab One", sans-serif;
   font-size: 2em;
