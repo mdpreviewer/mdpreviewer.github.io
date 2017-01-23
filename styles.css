@@ -7,9 +7,15 @@ html, body {
   overflow: auto;
 }
 
-.head {
-  font-family: "Alfa Slab One", cursive;
+h1.title {
+  text-align: center;
+  font-family: "Alfa Slab One", sans-serif;
   font-size: 2.5em;
+}
+
+.head {
+  font-family: "Alfa Slab One", sans-serif;
+  font-size: 2em;
   margin-top: 20px;
 }
 
