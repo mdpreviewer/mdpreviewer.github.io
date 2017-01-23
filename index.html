@@ -7,7 +7,6 @@
     <meta name="description" content="The best Markdown Previewer ever! Try it! Hold it! Love it!" />
     <meta name="keywords" content="markdown,code,marked,editor,preview" />
 
-    <link rel="stylesheet" type="text/css" href="vendors/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="styles/styles.css" />
     
     <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
@@ -33,23 +32,30 @@
     <meta property="og:description" content="The best Markdown Previewer ever! Try it! Hold it! Love it!" />
     <meta property="og:image" content="https://mdpreviewer.github.io/images/logo.png" />
     <meta property="og:image:secure_url" content="https://mdpreviewer.github.io/images/logo.png" />
-
-    <script src="vendors/react.js"></script>
-    <script src="vendors/react-dom.js"></script>
-    <script src="vendors/marked.min.js"></script>
   </head>
   <body>
     <h1 class="title">Markdown Prewiewer</h1>
     <div class="socials">
       <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fmdpreviewer.github.io%2F&layout=button_count&size=small&mobile_iframe=true&width=105&height=20&appId" width="105" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
     </div>
-    <div id="content"></div>
+    <div id="content">
+      <div class="result">
+        <div class="result__item">
+          <textarea class="textarea" v-model="input"></textarea>
+        </div>
+
+        <div class="result__item" v-html="getResult"></div>
+      </div><!-- /result -->
+    </div><!-- /content -->
+
     <footer class="row">
       <p class="col-xs-12">
         Made by <a href="https://saintgeo23.github.io/">saintgeo23</a> for <a href="http://www.freecodecamp.com/" target="_blank" rel="nofollow noopener noreferrer">FreeCodeCamp</a> project
       </p>
     </footer>
 
+    <script src="vendors/vue.min.js"></script>
+    <script src="vendors/marked.min.js"></script>
     <script src="scripts/main.js"></script>
     <script src="scripts/yametrica.js"></script>
     <script src="scripts/gametrica.js"></script>
