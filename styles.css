@@ -1,0 +1,49 @@
+@import url(https://fonts.googleapis.com/css?family=Alfa+Slab+One);
+
+html, body {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+.head {
+  font-family: "Alfa Slab One", cursive;
+  font-size: 2.5em;
+  margin-top: 20px;
+}
+
+#content {
+  position: relative;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+#content .wrapper {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+#content .wrapper .input-box {
+  height: 100%;
+  box-sizing: border-box;
+}
+#content .wrapper .input-box textarea {
+  resize: vertical;
+  min-height: 700px;
+}
+#content .wrapper .output-box {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  padding: 20px 0 10px;
+}
+footer p {
+  font-size: 0.75em;
+}

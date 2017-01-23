@@ -1,2 +1,4 @@
 # mdpreviewer.github.io
-Markdown Previewer
+## Simple Markdown Previewer
+
+Made with React.js
