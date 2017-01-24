@@ -1,7 +1,14 @@
 .wrapper {
   width: 100%;
   max-width: 1200px;
-  min-width: 676px;
   margin: 0 auto;
-  padding: 8px;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: @mobileWidth) {
+  .wrapper {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }

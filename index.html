@@ -4,6 +4,7 @@
     <title>Markdown Previewer</title>
 
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="description" content="The best Markdown Previewer ever! Try it! Hold it! Love it!" />
     <meta name="keywords" content="markdown,code,marked,editor,preview" />
 
@@ -44,16 +45,22 @@
     <div id="content" class="wrapper">
       <div class="box">
         <div class="box__item">
-          <textarea class="textarea js-textarea" v-model="input"></textarea>
+          <h3 class="box__head">Common input</h3>
+          <div class="box__body">
+            <textarea class="textarea" v-model="input"></textarea>
+          </div>
         </div>
 
-        <div class="box__item" v-html="getResult"></div>
+        <div class="box__item">
+          <h3 class="box__head">Magic output</h3>
+          <div class="box__body" v-html="getResult"></div>
+        </div>
       </div><!-- /box -->
     </div><!-- /wrapper -->
 
     <footer class="footer">
       <p class="footer__text">
-        Made by <a href="https://saintgeo23.github.io/">saintgeo23</a> for <a href="http://www.freecodecamp.com/" target="_blank" rel="nofollow noopener noreferrer">FreeCodeCamp</a> project
+        Made by <a class="link" href="https://saintgeo23.github.io/">saintgeo23</a> for <a class="link" href="http://www.freecodecamp.com/" target="_blank" rel="nofollow noopener noreferrer">FreeCodeCamp</a> project
       </p>
     </footer>
 
