@@ -1,0 +1,42 @@
+.box {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  &__item {
+    width: 48%;
+    border-radius: 8px;
+    background-color: @white;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .23),
+                0 3px 10px rgba(0, 0, 0, .16);
+  }
+
+  &__head {
+    background-color: @accent;
+    color: @white;
+    font: normal 14px/16px @Merriweather;
+    padding: 16px;
+    margin: 0;
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .2);
+  }
+
+  &__body {
+    padding: 16px;
+  }
+}
+
+@media screen and (max-width: @mobileWidth) {
+  .box {
+    display: block;
+
+    &__item {
+      width: 100%;
+    }
+
+    &__item + &__item {
+      margin-top: 16px;
+    }
+  }
+}

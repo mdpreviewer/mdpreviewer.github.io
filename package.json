@@ -1,0 +1,39 @@
+{
+  "name": "mdpreviewer.github.io",
+  "version": "1.0.0",
+  "description": "Markdown Previewer",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp clean && gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdpreviewer/mdpreviewer.github.io.git"
+  },
+  "keywords": [
+    "markdown",
+    "preview",
+    "code",
+    "marked",
+    "editor"
+  ],
+  "author": "saintgeo23",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mdpreviewer/mdpreviewer.github.io/issues"
+  },
+  "homepage": "https://github.com/mdpreviewer/mdpreviewer.github.io#readme",
+  "dependencies": {
+    "autoprefixer": "^6.7.0",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-less": "^3.3.0",
+    "gulp-postcss": "^6.3.0",
+    "rollup": "^0.41.4",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-uglify": "^1.0.1",
+    "stream-combiner2": "^1.1.1"
+  }
+}

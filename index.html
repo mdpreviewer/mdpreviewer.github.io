@@ -4,54 +4,73 @@
     <title>Markdown Previewer</title>
 
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="description" content="The best Markdown Previewer ever! Try it! Hold it! Love it!" />
     <meta name="keywords" content="markdown,code,marked,editor,preview" />
 
-    <link rel="stylesheet" type="text/css" href="vendors/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+    <link rel="stylesheet" type="text/css" href="public/styles/app.css" />
     
-    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="manifest" href="favicon/manifest.json">
+    <link rel="apple-touch-icon" sizes="57x57" href="public/images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="public/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="public/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="public/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="public/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="public/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="public/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="public/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="public/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="public/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="public/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="public/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="public/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="public/images/favicon/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="public/images/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
     <meta property="og:title" content="Markdown Previewer" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content="The best Markdown Previewer ever! Try it! Hold it! Love it!" />
-    <meta property="og:image" content="https://mdpreviewer.github.io/images/logo.png" />
-    <meta property="og:image:secure_url" content="https://mdpreviewer.github.io/images/logo.png" />
-
-    <script src="vendors/react.js"></script>
-    <script src="vendors/react-dom.js"></script>
-    <script src="vendors/marked.min.js"></script>
+    <meta property="og:image" content="https://mdpreviewer.github.io/public/images/logo.png" />
+    <meta property="og:image:secure_url" content="https://mdpreviewer.github.io/public/images/logo.png" />
   </head>
   <body>
     <h1 class="title">Markdown Prewiewer</h1>
+    <h2 class="title title_small">Try it! Hold it! Love it!</h2>
     <div class="socials">
-      <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fmdpreviewer.github.io%2F&layout=button_count&size=small&mobile_iframe=true&width=105&height=20&appId" width="105" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+      <div class="socials__item">
+        <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fmdpreviewer.github.io%2F&layout=button_count&size=small&mobile_iframe=true&width=105&height=20&appId" width="105" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+      </div>
     </div>
-    <div id="content"></div>
-    <footer class="row">
-      <p class="col-xs-12">
-        Made by <a href="https://saintgeo23.github.io/">saintgeo23</a> for <a href="http://www.freecodecamp.com/" target="_blank" rel="nofollow noopener noreferrer">FreeCodeCamp</a> project
+    <div id="content" class="wrapper">
+      <div class="box">
+        <div class="box__item">
+          <h3 class="box__head">Common input</h3>
+          <div class="box__body">
+            <textarea class="textarea" v-model="input"></textarea>
+          </div>
+        </div>
+
+        <div class="box__item">
+          <h3 class="box__head">Magic output</h3>
+          <div class="box__body" v-html="getResult"></div>
+        </div>
+      </div><!-- /box -->
+    </div><!-- /wrapper -->
+
+    <footer class="footer">
+      <p class="footer__text">
+        Made by <a class="link" href="https://saintgeo23.github.io/">saintgeo23</a> for <a class="link" href="http://www.freecodecamp.com/" target="_blank" rel="nofollow noopener noreferrer">FreeCodeCamp</a> project
       </p>
     </footer>
 
-    <script src="scripts/main.js"></script>
-    <script src="scripts/yametrica.js"></script>
-    <script src="scripts/gametrica.js"></script>
+    <script src="public/vendors/jquery.min.js"></script>
+    <script src="public/vendors/vue.min.js"></script>
+    <script src="public/vendors/marked.min.js"></script>
+
+    <script src="public/scripts/app.js"></script>
+
+    <script src="public/vendors/yametrica.js"></script>
+    <script src="public/vendors/gametrica.js"></script>
   </body>
 </html>

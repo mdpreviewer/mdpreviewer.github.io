@@ -1,0 +1,19 @@
+.textarea {  
+  display: block;
+  overflow: auto;
+  width:100%;
+  font-size:14px;
+  border-radius:8px;
+  border:0;
+  font-family: monospace;
+  min-height: 500px;
+  resize: vertical;
+  outline: none;
+}
+
+@media screen and (max-width: @mobileWidth) {
+  .textarea {
+    min-height: 200px;
+    resize: none;
+  }
+}
