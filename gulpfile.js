@@ -16,6 +16,7 @@ gulp.task('scripts', () =>
   rollup({
     entry: './src/scripts/app.js',
     globals: {
+      jQuery: 'jQuery',
       Vue: 'Vue',
       window: 'window',
     },

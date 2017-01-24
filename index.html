@@ -35,28 +35,34 @@
   </head>
   <body>
     <h1 class="title">Markdown Prewiewer</h1>
+    <h2 class="title title_small">Try it! Hold it! Love it!</h2>
     <div class="socials">
-      <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fmdpreviewer.github.io%2F&layout=button_count&size=small&mobile_iframe=true&width=105&height=20&appId" width="105" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+      <div class="socials__item">
+        <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fmdpreviewer.github.io%2F&layout=button_count&size=small&mobile_iframe=true&width=105&height=20&appId" width="105" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+      </div>
     </div>
-    <div id="content">
-      <div class="result">
-        <div class="result__item">
-          <textarea class="textarea" v-model="input"></textarea>
+    <div id="content" class="wrapper">
+      <div class="box">
+        <div class="box__item">
+          <textarea class="textarea js-textarea" v-model="input"></textarea>
         </div>
 
-        <div class="result__item" v-html="getResult"></div>
-      </div><!-- /result -->
-    </div><!-- /content -->
+        <div class="box__item" v-html="getResult"></div>
+      </div><!-- /box -->
+    </div><!-- /wrapper -->
 
-    <footer class="row">
-      <p class="col-xs-12">
+    <footer class="footer">
+      <p class="footer__text">
         Made by <a href="https://saintgeo23.github.io/">saintgeo23</a> for <a href="http://www.freecodecamp.com/" target="_blank" rel="nofollow noopener noreferrer">FreeCodeCamp</a> project
       </p>
     </footer>
 
+    <script src="public/vendors/jquery.min.js"></script>
     <script src="public/vendors/vue.min.js"></script>
     <script src="public/vendors/marked.min.js"></script>
+
     <script src="public/scripts/app.js"></script>
+
     <script src="public/vendors/yametrica.js"></script>
     <script src="public/vendors/gametrica.js"></script>
   </body>

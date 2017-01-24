@@ -1,0 +1,16 @@
+.box {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-radius: 8px;
+  background-color: @white;
+
+  &__item {
+    width: 95%;
+  }
+
+  &__item + &__item {
+    margin-left: 16px;
+  } 
+}
