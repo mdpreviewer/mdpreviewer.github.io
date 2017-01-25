@@ -128,6 +128,7 @@ pre code {
   min-height: 500px;
   resize: vertical;
   outline: none;
+  padding: 0;
 }
 @media screen and (max-width: 580px) {
   .textarea {
