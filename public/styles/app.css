@@ -13,12 +13,33 @@ body {
   font: normal 14px/16px 'Open Sans', Arial, sans-serif;
   color: #212121;
 }
+pre {
+  display: block;
+  padding: 9.5px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  color: #333;
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
 code {
   padding: 2px 4px;
   font-size: 90%;
   color: #c7254e;
   background-color: #f9f2f4;
   border-radius: 4px;
+}
+pre code {
+  padding: 0;
+  font-size: inherit;
+  color: inherit;
+  white-space: pre-wrap;
+  background-color: transparent;
+  border-radius: 0;
 }
 .title {
   text-align: center;
@@ -59,9 +80,9 @@ code {
 }
 .box__item {
   width: 48%;
-  border-radius: 8px;
+  border-radius: 4px;
   background-color: #FFFFFF;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.23), 0 3px 10px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
 }
 .box__head {
   background-color: #FB7D79;
@@ -69,8 +90,8 @@ code {
   font: normal 14px/16px 'Merriweather', 'Times New Roman', serif;
   padding: 16px;
   margin: 0;
-  border-radius: 8px 8px 0 0;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 4px 4px 0 0;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
 }
 .box__body {
   padding: 16px;
@@ -101,7 +122,7 @@ code {
   overflow: auto;
   width: 100%;
   font-size: 14px;
-  border-radius: 8px;
+  border-radius: 4px;
   border: 0;
   font-family: monospace;
   min-height: 500px;
